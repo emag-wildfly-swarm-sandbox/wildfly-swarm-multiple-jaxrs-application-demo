@@ -9,7 +9,12 @@ WildFly Swarm Multiple JAX-RS Application Demo
 java -jar target/wildfly-swarm-multiple-jaxrs-application-demo-swarm.jar 
 ```
 
-## APIs
+## JAX-RS Resources
 
-* /public
-* /private
+* http://localhost:8080/my-app/public
+* http://localhost:8080/my-app/private
+
+## Static Contents
+
+* http://localhost:8080/my-app/
+* http://localhost:8080/my-app/sub/sub.html
