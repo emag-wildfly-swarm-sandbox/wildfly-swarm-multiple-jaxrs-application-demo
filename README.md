@@ -9,6 +9,12 @@ WildFly Swarm Multiple JAX-RS Application Demo
 java -jar target/wildfly-swarm-multiple-jaxrs-application-demo-swarm.jar 
 ```
 
+or
+
+``` console
+./mvnw clean wildfly-swarm:run -Penv-development
+```
+
 ## JAX-RS Resources
 
 * http://localhost:8080/my-app/public

@@ -60,12 +60,29 @@
     </dependencies>
   </dependencyManagement>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.wildfly.swarm</groupId>
-      <artifactId>jaxrs</artifactId>
-    </dependency>
-  </dependencies>
+  <profiles>
+    <profile>
+      <id>env-production</id>
+      <activation>
+        <property>
+          <name>env</name>
+          <value>production</value>
+        </property>
+      </activation>
+    </profile>
+    <profile>
+      <id>env-development</id>
+      <properties>
+        <hibernate.provider>org.hibernate:5.2</hibernate.provider>
+      </properties>
+      <dependencies>
+        <dependency>
+          <groupId>org.wildfly.swarm</groupId>
+          <artifactId>jaxrs</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+  </profiles>
 
   <build>
     <finalName>${project.artifactId}</finalName>
